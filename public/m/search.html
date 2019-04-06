@@ -7,13 +7,13 @@
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>个人中心</title>
+    <title>搜索中心</title>
     <!-- 使用MUI类似于boorstrop框架,引入mui的css 不依赖任何第三方库直接引入mui.js-->
     <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
     <!-- 引入font-awsome子图图标 -->
     <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.min.css">
     <!-- 引入自己的css -->
-    <link rel="stylesheet" href="./less/users.css">
+    <link rel="stylesheet" href="./less/search.css">
 
 
 </head>
@@ -22,44 +22,50 @@
     <!-- 主页头部区域 -->
     <header id="header">
         <div class="left">
-            <a href="./index.html">
+            <a href="./categories.html">
                 <i class="fa fa-arrow-left" aria-hidden="true"></i>
             </a>
         </div>
         <div class="center">
-            <h4>个人中心</h4>
+            <h4>搜索中心</h4>
         </div>
         <div class="right">
+            <!-- <a href="#">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </a> -->
         </div>
     </header>
     <!-- 主题区域 -->
 
     <main id="main">
-        <section id="users">
-            <ul class="mui-table-view">
-                <li class="mui-table-view-cell">
-                    <a href="#">
-                        <img src="./images/user.jpg" alt="">
-                        <div class="messages">
-                            <p class="username">用户名:<span></span></p>
-                            <p class="mobile">绑定手机:<span></span></p>
-                        </div>
-                    </a>
-                </li>
-                <li class="mui-table-view-cell">
-                    <a class="mui-navigate-right">账号与安全</a>
-                </li>
-                <li class="mui-table-view-cell">
-                    <a class="mui-navigate-right" href="./cart.html">我的购物车</a>
-                </li>
-                <li class="mui-table-view-cell">
-                    <a class="mui-navigate-right">收获地址管理</a>
-                </li>
-                <li class="mui-table-view-cell">
-                    <button id="login-out" style="width:95%">退出登录</button>
-                </li>
-            </ul>
-        </section>
+            <form action="#">
+                <input type="text" placeholder='请输入要搜索的商品' name="serch" id="search">
+                <button type="button" id="btn" class="mui-btn-primary">搜索</button>
+            </form>
+            <div class="mui-card">
+                <!--页眉，放置标题-->
+                <div class="mui-card-header">
+                    <span>搜索历史</span>
+                    <span class="fa fa-trash">清空记录</span>
+                </div>
+                <!--内容区-->
+                <div class="mui-card-content search-history">
+                    <ul class="mui-table-view">
+                        <li class="mui-table-view-cell">Item 1
+                            <span class="mui-badge fa fa-close "></span>
+                        </li>
+                        <li class="mui-table-view-cell">Item 2
+                            <span class="mui-badge fa fa-close "></span>
+                        </li>
+                        <li class="mui-table-view-cell">Item 3
+                            <span class="mui-badge fa fa-close "></span>
+                        </li>
+                    </ul>
+                </div>
+                <!--页脚，放置补充信息或支持的操作-->
+                
+            </div>
+        
     </main>
     <!-- 底部区域 -->
     <footer id="footer">
@@ -96,4 +102,4 @@
 </html>
 <script src="./lib/mui/js/mui.min.js"></script>
 <script src="./lib/zepto/zepto.min.js"></script>
-<script src="./js/users.js"></script>
+<script src="./js/search.js"></script>

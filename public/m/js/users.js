@@ -8,10 +8,10 @@ $(function(){
         获取sessionStorage.getItem('属性名')
     */
    
-    //判断是否存在sessionStorage 不存在则不允许访问
-    // if(!sessionStorage.getItem('username')&&sessionStorage.getItem('password')){
-    //     location='login.html'
-    // }
+    //判断是否存在sessionStorage 不存在则不允许访问返回登录页面
+    if(!sessionStorage.getItem('username')){
+        location='login.html'
+    }
     console.log(sessionStorage.getItem('username'));
     $.ajax({
         url:'/user/queryUserMessage',
@@ -26,6 +26,7 @@ $(function(){
     })
     $('#login-out').on('click',function(e){
         e.preventDefault();
+        sessionStorage.removeItem('username')
         location='./login.html'
 
     })

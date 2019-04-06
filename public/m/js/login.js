@@ -7,7 +7,7 @@
         3.判断登录成功与否并告诉用户原因或跳转到登录页面
 */
 
-$('#btn').on('click', function () {
+$('#btn').on('tap', function () {
 
     if ($('.mui-input-clear').val() == '') {
         alert('用户名不能为空')
@@ -32,13 +32,13 @@ $('#btn').on('click', function () {
         }
     }
     )
-    // sessionStorage.setItem('username',$('.mui-input-clear').val());
+    sessionStorage.setItem('username',$('.mui-input-clear').val());
     // sessionStorage.setItem('password',$('.mui-input-password').val());
 })
 /* 
         注册账户:
             给注册按钮添加注册事件,并且储存到数据库中
 */
-    $('#register').on('click',function(){
+    $('#register').on('tap',function(){
         location='register.html';
     })

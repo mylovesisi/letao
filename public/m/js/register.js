@@ -21,8 +21,7 @@ Letao.prototype = {
     register: function () {
         var vCodes;
         /* 获取验证码 */
-        $('#get-Vcode').on('click', function (e) {
-            e.preventDefault();
+        $('#get-Vcode').on('tap', function () {
             $.ajax({
                 url: '/user/vCode',
                 type: 'get',
@@ -36,7 +35,7 @@ Letao.prototype = {
         })
         /* 获取用户名 */
 
-        $('#btn').on('click', function (e) {
+        $('#btn').on('tap', function (e) {
             console.log(vCodes);
             //阻止默认跳转
             var myreg = /^[1][3,4,5,7,8][0-9]{9}$/;

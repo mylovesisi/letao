@@ -13,7 +13,7 @@ $(function () {
 var Letao = function () {
 
 }
-var id;
+
 Letao.prototype = {
     categoriesLeft: function () {
         mui('#categories-left .mui-scroll-wrapper').scroll({
@@ -49,7 +49,7 @@ Letao.prototype = {
         console.log(this); //等于Leta这个构造函数 把this存入到that中 利用that.querySecondCategory()传入参数id来获取二级分类的数据渲染到页面中
         var that = this;
         /* 获取点击的元素 注意的是动态生成的元素不能直接获得点击事件 利用事件委托的方法 */
-        $('#categories-left').on('click', 'a', function () {
+        $('#categories-left').on('tap', 'a', function () {
 
             $(this).parent().addClass('active').siblings().removeClass('active');
             var id = $(this).data('id');

@@ -126,3 +126,11 @@ img {
   display: block;
   line-height: 0.14rem;
 }
+#main #users ul li a {
+  display: block;
+}
+#main #users ul li a img {
+  float: left;
+  width: .42rem;
+  height: 0.42rem;
+}

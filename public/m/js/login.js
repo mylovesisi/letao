@@ -32,6 +32,8 @@ $('#btn').on('click', function () {
         }
     }
     )
+    // sessionStorage.setItem('username',$('.mui-input-clear').val());
+    // sessionStorage.setItem('password',$('.mui-input-password').val());
 })
 /* 
         注册账户:

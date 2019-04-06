@@ -30,52 +30,33 @@
             <h4>个人中心</h4>
         </div>
         <div class="right">
-            <!-- <a href="#">
-                <i class="fa fa-search" aria-hidden="true"></i>
-            </a> -->
         </div>
     </header>
     <!-- 主题区域 -->
 
     <main id="main">
-        <section id="login">
-            <!-- <form class="mui-input-group">
-                <div class="mui-input-row">
-                    <label>用户名</label>
-                    <input type="text"  class="mui-input-clear" placeholder="请输入用户名">
-                </div>
-                <div class="mui-input-row">
-                    <label>密码</label>
-                    <input type="password" class="mui-input-password" placeholder="请输入密码">
-                </div>
-                <div class="mui-button-row">
-                    <button type="button" class="mui-btn mui-btn-primary" id="btn">确认</button>
-                    <button type="button" class="mui-btn mui-btn-danger" id="register">免费注册</button>
-                </div>
-            </form> -->
+        <section id="users">
             <ul class="mui-table-view">
                 <li class="mui-table-view-cell">
-                    <a class="mui-navigate-right">
-                        <a href="#">
-                            <i class="mui-icon mui-icon-contact"></i>
-                            <div class="messages">
-                                <p class="username"></p>
-                                <p class="mobile"></p>
-                            </div>
-                        </a>
+                    <a href="#">
+                        <img src="./images/user.jpg" alt="">
+                        <div class="messages">
+                            <p class="username">用户名:<span></span></p>
+                            <p class="mobile">绑定手机:<span></span></p>
+                        </div>
                     </a>
                 </li>
                 <li class="mui-table-view-cell">
                     <a class="mui-navigate-right">账号与安全</a>
                 </li>
                 <li class="mui-table-view-cell">
-                    <a class="mui-navigate-right">我的购物车</a>
+                    <a class="mui-navigate-right" href="./cart.html">我的购物车</a>
                 </li>
                 <li class="mui-table-view-cell">
                     <a class="mui-navigate-right">收获地址管理</a>
                 </li>
                 <li class="mui-table-view-cell">
-                    <button>退出登录</button>
+                    <button id="login-out" style="width:95%">退出登录</button>
                 </li>
             </ul>
         </section>
@@ -96,13 +77,13 @@
                 </a>
             </div>
             <div class="mui-col-sm-3">
-                <a href="#">
+                <a href="./cart.html">
                     <i class="fa fa-shopping-cart"></i>
                     <span>购物车</span>
                 </a>
             </div>
             <div class="mui-col-sm-3">
-                <a href="#">
+                <a href="./login.html">
                     <i class="fa fa-user"></i>
                     <span>个人中心</span>
                 </a>

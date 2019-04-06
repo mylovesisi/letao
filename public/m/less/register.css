@@ -1,0 +1,138 @@
+/* 边框的封装.可传参,不传即形参后的默认值 */
+a {
+  text-decoration: none;
+}
+html {
+  font-size: 26.6667vw;
+  height: 100%;
+}
+body {
+  font-size: .14rem;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 300;
+  margin: 0;
+}
+img {
+  vertical-align: middle;
+}
+#header {
+  height: .45rem;
+  display: flex;
+  background-color: #006699;
+}
+#header .left {
+  height: .45rem;
+  width: .45rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#header .left a {
+  display: block;
+  color: #fff;
+}
+#header .left a i {
+  font-size: 20px;
+}
+#header .center {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#header .center h4 {
+  color: #fff;
+}
+#header .center form {
+  height: .35rem;
+  border-top: .05rem;
+}
+#header .center form input {
+  background-color: #fff;
+  border-radius: .35rem;
+  height: .35rem;
+  text-align: left;
+  border: 1px solid #fff;
+  color: #000;
+}
+#header .right {
+  height: .45rem;
+  width: .45rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#header .right a {
+  color: #fff;
+  display: block;
+}
+#header .right a i {
+  font-size: 20px;
+}
+#main {
+  flex: 1;
+  overflow: hidden;
+}
+#main .mui-scroll-wrapper {
+  position: relative;
+  height: 100%;
+}
+#footer {
+  height: .45rem;
+  background-color: #006699;
+}
+#footer .mui-row > div {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: .45rem;
+}
+#footer .mui-row > div a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+#footer .mui-row > div a i {
+  line-height: 0.14rem;
+}
+#footer .mui-row > div a > span {
+  display: block;
+  line-height: 0.14rem;
+}
+#main #register form > div label {
+  width: 25%;
+}
+#main #register form > div input {
+  float: left;
+  width: 50%;
+}
+#main #register form > div input::placeholder {
+  font-size: 0.14rem;
+}

@@ -1,0 +1,46 @@
+@import './base.less';
+
+#main {
+    display: flex;
+
+    #categories-left {
+        width: 0.8rem;
+
+        .mui-table-view-cell {
+            padding: .15rem;
+            &.active{
+                background-color: orangered;
+            }
+        }
+
+
+        .mui-table-view-cell:after {
+            left: 0;
+        }
+    }
+
+    #categories-right {
+        flex: 1;
+        padding: .1rem;
+        .mui-row {
+            >div {
+                a {
+                    display: block;
+                    background-color: #fff;
+                    margin-bottom: .1rem;
+                    .dfcc();
+                    box-sizing: border-box;
+                    border-right: 1px solid orangered; 
+                    img {
+                        width: 100%;
+                        // height: .9rem;
+                    }
+                    p {
+                        margin-bottom: 0;
+                        line-height: .2rem;
+                    }
+                }
+            }
+        }
+    }
+}

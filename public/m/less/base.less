@@ -1,0 +1,182 @@
+@main-color: #006699;
+@a-color: #666;
+
+.dfcc() {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 边框的封装.可传参,不传即形参后的默认值 */
+.bt(@width: .01rem, @styly: solid, @color: #000) {
+    border-top: @width, @styly, @color;
+}
+
+.bb(@width: .01rem, @styly: solid, @color: #000) {
+    border-bottom: @width, @styly, @color;
+}
+
+.bl(@width: .01rem, @styly: solid, @color: #000) {
+    border-left: @width, @styly, @color;
+}
+
+.br(@width: .01rem, @styly: solid, @color: #000) {
+    border-right: @width, @styly, @color;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    font-size: 26.6667vw;
+    height: 100%;
+}
+
+body {
+    font-size: .14rem;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 300;
+    margin: 0;
+}
+
+img {
+    vertical-align: middle;
+}
+
+#header {
+    height: .45rem;
+    display: flex;
+    background-color: @main-color;
+
+    .left {
+        height: .45rem;
+        width: .45rem;
+        .dfcc();
+
+        a {
+            display: block;
+            color: #fff;
+
+            i {
+                font-size: 20px;
+            }
+
+        }
+    }
+
+    .center {
+        flex: 1;
+        .dfcc();
+
+        h4 {
+            color: #fff;
+        }
+
+        form {
+            height: .35rem;
+            border-top: .05rem;
+
+            input {
+                background-color: #fff;
+                border-radius: .35rem;
+                height: .35rem;
+                text-align: left;
+
+                border: 1px solid #fff;
+                color: #000;
+            }
+        }
+    }
+
+    .right {
+        height: .45rem;
+        width: .45rem;
+        .dfcc();
+
+        a {
+            color: #fff;
+            display: block;
+
+            i {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+#main {
+    flex: 1;
+    overflow: hidden;
+
+    // 1. 给父元素比如main设置相对定位
+    // position: relative;
+    // 区域滚动的父容器
+    .mui-scroll-wrapper {
+        // 默认设置了绝对定位所以飘了
+        // 2. 给自己 区域滚动父容器设置相对定位 但是默认没有高度 设置成父元素一样高
+        // position: absolute;
+        position: relative;
+        // 手动设置高度和父元素一样
+        height: 100%;
+        // 区域滚动子容器 高度是auto的
+        // .mui-scroll{
+
+        // }
+    }
+}
+
+#footer {
+    height: .45rem;
+    background-color: @main-color;
+
+    .mui-row {
+        >div {
+            width: 25%;
+            .dfcc();
+            height: .45rem;
+
+            a {
+                .dfcc();
+                color: #fff;
+
+                i {
+                    line-height: 0.14rem;
+                }
+
+                >span {
+                    display: block;
+                    line-height: 0.14rem;
+                }
+                // &.active{
+                //     background-color: orange;
+                // }
+            }
+        }
+    }
+}

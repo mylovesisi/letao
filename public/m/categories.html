@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>分类页面</title>
+    <!-- 使用MUI类似于boorstrop框架,引入mui的css 不依赖任何第三方库直接引入mui.js-->
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <!-- 引入font-awsome子图图标 -->
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.min.css">
+    <!-- 引入自己的css -->
+    <link rel="stylesheet" href="./less/categories.css">
+
+
+</head>
+
+<body>
+    <!-- 主页头部区域 -->
+    <header id="header">
+        <div class="left">
+            <a href="#">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div class="center">
+            <form action="#">
+                <input type="search" placeholder="请输入你想要搜索的商品">
+            </form>
+        </div>
+        <div class="right">
+            <a href="#">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </a>
+        </div>
+    </header>
+    <!-- 主题区域 -->
+
+    <main id="main">
+
+        <section id="categories-left">
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll" id="left">
+                    <!-- 加一个id为了方便渲染 -->
+                    <!-- <ul class="mui-table-view">
+                        <li class="mui-table-view-cell">
+                            
+                        </li>
+                    </ul> -->
+                </div>
+            </div>
+        </section>
+        <section id="categories-right">
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <div class="mui-row" id="right">
+                        <!-- <div class="mui-col-xs-4"><a href="#"><img
+                                    src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554395541418&di=1c8b6852515f30b59856e03eee98666d&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180526%2Fbdfbfc8c978144adb9df3955627c7419.gif"
+                                    alt="">
+                                <p>❤</p>
+                            </a></div> -->
+                        <!-- <div class="mui-col-xs-4"><a href="#"><img
+                                    src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554395541418&di=1c8b6852515f30b59856e03eee98666d&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180526%2Fbdfbfc8c978144adb9df3955627c7419.gif"
+                                    alt="">
+                                <p>❤</p>
+                            </a></div>
+                        <div class="mui-col-xs-4"><a href="#"><img
+                                    src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554395541418&di=1c8b6852515f30b59856e03eee98666d&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180526%2Fbdfbfc8c978144adb9df3955627c7419.gif"
+                                    alt="">
+                                <p>❤</p>
+                            </a></div>
+                        <div class="mui-col-xs-4"><a href="#"><img
+                                    src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554395541418&di=1c8b6852515f30b59856e03eee98666d&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180526%2Fbdfbfc8c978144adb9df3955627c7419.gif"
+                                    alt="">
+                                <p>❤</p>
+                            </a></div>
+                        <div class="mui-col-xs-4"><a href="#"><img
+                                    src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554395541418&di=1c8b6852515f30b59856e03eee98666d&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180526%2Fbdfbfc8c978144adb9df3955627c7419.gif"
+                                    alt="">
+                                <p>❤</p>
+                            </a></div>
+                        <div class="mui-col-xs-4"><a href="#"><img
+                                    src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554395541418&di=1c8b6852515f30b59856e03eee98666d&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180526%2Fbdfbfc8c978144adb9df3955627c7419.gif"
+                                    alt="">
+                                <p>❤</p>
+                            </a></div>
+                        <div class="mui-col-xs-4"><a href="#"><img
+                                    src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554395541418&di=1c8b6852515f30b59856e03eee98666d&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180526%2Fbdfbfc8c978144adb9df3955627c7419.gif"
+                                    alt="">
+                                <p>❤</p>
+                            </a></div>
+                        <div class="mui-col-xs-4"><a href="#"><img
+                                    src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554395541418&di=1c8b6852515f30b59856e03eee98666d&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180526%2Fbdfbfc8c978144adb9df3955627c7419.gif"
+                                    alt="">
+                                <p>❤</p>
+                            </a></div>
+                        <div class="mui-col-xs-4"><a href="#"><img
+                                    src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554395541418&di=1c8b6852515f30b59856e03eee98666d&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180526%2Fbdfbfc8c978144adb9df3955627c7419.gif"
+                                    alt="">
+                                <p>❤</p>
+                            </a></div>
+                        <div class="mui-col-xs-4"><a href="#"><img
+                                    src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554395541418&di=1c8b6852515f30b59856e03eee98666d&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180526%2Fbdfbfc8c978144adb9df3955627c7419.gif"
+                                    alt="">
+                                <p>❤</p>
+                            </a></div>
+                        <div class="mui-col-xs-4"><a href="#"><img
+                                    src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554395541418&di=1c8b6852515f30b59856e03eee98666d&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180526%2Fbdfbfc8c978144adb9df3955627c7419.gif"
+                                    alt="">
+                                <p>❤</p>
+                            </a></div>
+                        <div class="mui-col-xs-4"><a href="#"><img
+                                    src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554395541418&di=1c8b6852515f30b59856e03eee98666d&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180526%2Fbdfbfc8c978144adb9df3955627c7419.gif"
+                                    alt="">
+                                <p>❤</p>
+                            </a></div>
+                        <div class="mui-col-xs-4"><a href="#"><img
+                                    src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554395541418&di=1c8b6852515f30b59856e03eee98666d&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180526%2Fbdfbfc8c978144adb9df3955627c7419.gif"
+                                    alt="">
+                                <p>❤</p>
+                            </a></div>
+                        <div class="mui-col-xs-4"><a href="#"><img
+                                    src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554395541418&di=1c8b6852515f30b59856e03eee98666d&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180526%2Fbdfbfc8c978144adb9df3955627c7419.gif"
+                                    alt="">
+                                <p>❤</p>
+                            </a></div>
+                        <div class="mui-col-xs-4"><a href="#"><img
+                                    src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554395541418&di=1c8b6852515f30b59856e03eee98666d&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180526%2Fbdfbfc8c978144adb9df3955627c7419.gif"
+                                    alt="">
+                                <p>❤</p>
+                            </a></div>
+                        <div class="mui-col-xs-4"><a href="#"><img
+                                    src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554395541418&di=1c8b6852515f30b59856e03eee98666d&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180526%2Fbdfbfc8c978144adb9df3955627c7419.gif"
+                                    alt="">
+                                <p>❤</p>
+                            </a></div>
+                        <div class="mui-col-xs-4"><a href="#"><img
+                                    src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554395541418&di=1c8b6852515f30b59856e03eee98666d&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180526%2Fbdfbfc8c978144adb9df3955627c7419.gif"
+                                    alt="">
+                                <p>❤</p>
+                            </a></div>
+                        <div class="mui-col-xs-4"><a href="#"><img
+                                    src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554395541418&di=1c8b6852515f30b59856e03eee98666d&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180526%2Fbdfbfc8c978144adb9df3955627c7419.gif"
+                                    alt="">
+                                <p>❤</p>
+                            </a></div>
+                        <div class="mui-col-xs-4"><a href="#"><img
+                                    src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554395541418&di=1c8b6852515f30b59856e03eee98666d&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180526%2Fbdfbfc8c978144adb9df3955627c7419.gif"
+                                    alt="">
+                                <p>❤</p>
+                            </a></div>
+                        <div class="mui-col-xs-4"><a href="#"><img
+                                    src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554395541418&di=1c8b6852515f30b59856e03eee98666d&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180526%2Fbdfbfc8c978144adb9df3955627c7419.gif"
+                                    alt="">
+                                <p>❤</p>
+                            </a></div>
+                        <div class="mui-col-xs-4"><a href="#"><img
+                                    src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554395541418&di=1c8b6852515f30b59856e03eee98666d&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180526%2Fbdfbfc8c978144adb9df3955627c7419.gif"
+                                    alt="">
+                                <p>❤</p>
+                            </a></div>
+                        <div class="mui-col-xs-4"><a href="#"><img
+                                    src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554395541418&di=1c8b6852515f30b59856e03eee98666d&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180526%2Fbdfbfc8c978144adb9df3955627c7419.gif"
+                                    alt="">
+                                <p>❤</p>
+                            </a></div>
+                        <div class="mui-col-xs-4"><a href="#"><img
+                                    src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554395541418&di=1c8b6852515f30b59856e03eee98666d&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180526%2Fbdfbfc8c978144adb9df3955627c7419.gif"
+                                    alt="">
+                                <p>❤</p>
+                            </a></div>
+                        <div class="mui-col-xs-4"><a href="#"><img
+                                    src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554395541418&di=1c8b6852515f30b59856e03eee98666d&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180526%2Fbdfbfc8c978144adb9df3955627c7419.gif"
+                                    alt="">
+                                <p>❤</p>
+                            </a></div>
+                        <div class="mui-col-xs-4"><a href="#"><img
+                                    src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554395541418&di=1c8b6852515f30b59856e03eee98666d&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180526%2Fbdfbfc8c978144adb9df3955627c7419.gif"
+                                    alt="">
+                                <p>❤</p>
+                            </a></div>
+                        <div class="mui-col-xs-4"><a href="#"><img
+                                    src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554395541418&di=1c8b6852515f30b59856e03eee98666d&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180526%2Fbdfbfc8c978144adb9df3955627c7419.gif"
+                                    alt="">
+                                <p>❤</p>
+                            </a></div>
+                        <div class="mui-col-xs-4"><a href="#"><img
+                                    src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554395541418&di=1c8b6852515f30b59856e03eee98666d&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180526%2Fbdfbfc8c978144adb9df3955627c7419.gif"
+                                    alt="">
+                                <p>❤</p>
+                            </a></div>
+                        <div class="mui-col-xs-4"><a href="#"><img
+                                    src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554395541418&di=1c8b6852515f30b59856e03eee98666d&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180526%2Fbdfbfc8c978144adb9df3955627c7419.gif"
+                                    alt="">
+                                <p>❤</p>
+                            </a></div>
+                        <div class="mui-col-xs-4"><a href="#"><img
+                                    src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554395541418&di=1c8b6852515f30b59856e03eee98666d&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180526%2Fbdfbfc8c978144adb9df3955627c7419.gif"
+                                    alt="">
+                                <p>❤</p>
+                            </a></div>
+                        <div class="mui-col-xs-4"><a href="#">
+                                <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554395541418&di=1c8b6852515f30b59856e03eee98666d&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180526%2Fbdfbfc8c978144adb9df3955627c7419.gif"
+                                    alt="">
+                                <p>❤</p>
+                            </a></div>
+                        <div class="mui-col-xs-4"><a href="#"><img
+                                    src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554395541418&di=1c8b6852515f30b59856e03eee98666d&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180526%2Fbdfbfc8c978144adb9df3955627c7419.gif"
+                                    alt="">
+                                <p>❤</p>
+                            </a></div>
+                        <div class="mui-col-xs-4"><a href="#"><img
+                                    src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554395541418&di=1c8b6852515f30b59856e03eee98666d&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180526%2Fbdfbfc8c978144adb9df3955627c7419.gif"
+                                    alt="">
+                                <p>❤</p>
+                            </a></div>
+                        <div class="mui-col-xs-4"><a href="#"><img
+                                    src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554395541418&di=1c8b6852515f30b59856e03eee98666d&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180526%2Fbdfbfc8c978144adb9df3955627c7419.gif"
+                                    alt="">
+                                <p>❤</p>
+                            </a></div> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- 底部区域 -->
+    <footer id="footer">
+        <div class="mui-row">
+            <div class="mui-col-sm-3">
+                <a href="./index.html">
+                    <i class="fa fa-home"></i>
+                    <span>首页</span>
+                </a>
+            </div>
+            <div class="mui-col-sm-3">
+                <a href="#">
+                    <i class="fa fa-bars"></i>
+                    <span>分类</span>
+                </a>
+            </div>
+            <div class="mui-col-sm-3">
+                <a href="#">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span>购物车</span>
+                </a>
+            </div>
+            <div class="mui-col-sm-3">
+                <a href="./login.html" class="active">
+                    <i class="fa fa-user"></i>
+                    <span>个人中心</span>
+                </a>
+            </div>
+
+        </div>
+    </footer>
+</body>
+
+</html>
+<!-- {{ each list value }} -->
+<!-- as value 相当于给循环遍历的每一个对象起别名 也可以不写 如果不写的话 就在后面的值中的value前加$-->
+<script type="text/html" id="query-top-category">
+    <ul class="mui-table-view">
+        {{ each rows  }}
+        <li class="mui-table-view-cell {{ $index==0? 'active':'' }}">
+            <!-- index是索引 -->
+            <a href="#" data-id="{{ $value.id }}">
+                {{ $value.categoryName }}
+            </a>
+        </li>
+        {{ /each }}
+    </ul>
+</script>
+<script type="text/html" id="query-second-category">
+    {{ if rows.length>0 }}
+    {{ each rows  }}
+    <div class="mui-col-xs-4">
+        <a href="#">
+            <img src="{{ $value.brandLogo }}">
+            <p>{{ $value.brandName }}</p>
+        </a>
+    </div>
+    {{ /each }}
+    {{ else }}
+    <div><p>找你麻麻去!!!!!!!!!!</p></div>
+    {{ /if}}
+</script>
+<script src="./lib/mui/js/mui.min.js"></script>
+<!-- 模板引擎 -->
+<script src="./lib/artTemplate/template-web.js"></script>
+<!-- zepto相对于jQuery而已更小的js库 -->
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./js/categories.js"></script>

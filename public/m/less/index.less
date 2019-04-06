@@ -1,0 +1,69 @@
+@import './base.less';
+/*封装居中属性的函数,在样式中直接调用即可 */
+
+/* 导航条 */
+#nav{
+    padding: 10px;
+    .mui-row{
+        >div{
+            a{  
+                display: block;
+                img{
+                   width: 100%; 
+                }
+            }
+        }
+    }
+}
+/* 广告区 */
+#banner{
+    padding: 0 10px;
+    .mui-row{
+        .left{
+            >div{
+                >div{
+                    a{
+                        display: block;
+
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        .right{
+           a{
+               display: block;
+               img{
+                width: 100%;
+                height: 2.4175rem;
+               }
+           } 
+        }
+    }
+}
+/*品牌专区*/
+#brand,#sports,#sports2{
+    padding: 10px;
+    .title{
+        a{
+            display: block;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    .content{
+        >div{
+            >div{
+                a{
+                    display: block;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

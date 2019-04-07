@@ -128,12 +128,13 @@ img {
 }
 #main {
   display: flex;
+  background-color: #fff;
   flex-direction: column;
 }
 #main form {
   height: 0.34rem;
   display: flex;
-  margin-bottom: .1rem;
+  margin-bottom: .2rem;
   padding: .1rem .1rem;
 }
 #main form #search {
@@ -151,24 +152,40 @@ img {
   border-radius: 0 .06rem .06rem 0;
   color: #fff;
 }
-#main .mui-card {
+#main .productlist {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
-#main .mui-card .mui-card-header {
-  height: .44rem;
+#main .productlist .title {
+  height: .21rem;
 }
-#main .mui-card .search-history {
+#main .productlist .title .mui-row > div {
+  border-right: 1px solid #000;
+  text-align: center;
+  background-color: #ccc;
+}
+#main .productlist .title .mui-row > div:last-child {
+  border-right: 0;
+}
+#main .productlist .title .mui-row > div a {
+  color: #000;
+  display: block;
+}
+#main .productlist .title .mui-row > div a.active {
+  background-color: orange;
+}
+#main .productlist .content {
   flex: 1;
-  height: 100%;
+  padding: .06rem;
 }
-#main .mui-card .search-history .mui-scroll-wrapper {
-  height: 100%;
+#main .productlist .content .mui-row > div {
+  text-align: center;
+  border: 1px solid #ccc;
 }
-#main .mui-card .search-history .mui-scroll-wrapper .mui-scroll {
-  height: auto;
+#main .productlist .content .mui-row > div a img {
+  width: 100%;
 }
-#main .mui-card .search-history .mui-scroll-wrapper .mui-scroll #ul1 .mui-table-view-cell::after {
-  left: 0;
+#main .productlist .content .mui-row > div a .product-buy {
+  margin-bottom: 0.1rem;
 }

@@ -19,6 +19,10 @@ $(function () {
     var leTao = new LeTao()
     leTao.searchHistory();
     leTao.addHistory();
+    leTao.getHistoryData();
+    leTao.scrollArea();
+    leTao.deleteSingle();
+    leTao.deleteAll();
 })
 
 var LeTao = function () {}
@@ -26,12 +30,15 @@ var LeTao = function () {}
 LeTao.prototype = {
     //1
     searchHistory: function () {
-        var arr = [];
+        var that = this;
+        
         $('#btn').on('tap', function () {
-
+            var search=$('#search').val().trim();
             if ($('#search').val().trim() == '') {
                 return
             }
+            //声明一个空数组存入本地中;判断是非为空
+            var arr = JSON.parse(localStorage.getItem('arr')) || [];
             //将搜索的记录按顺序添加到数组中
             arr.unshift($('#search').val().trim())
             //数组的去重
@@ -47,19 +54,67 @@ LeTao.prototype = {
             }
             //将去重过的数组重新赋值给arr;
             arr = uniq(arr)
-            console.log(arr);
-            //存入到本地中
+
+            ///数据储存,存入到本地中
             localStorage.setItem('arr', JSON.stringify(arr))
             //清空输入框下次内容
             $('#search').val('');
+            that.arrs = arr;
+            that.getHistoryData(arr)
+            that.addHistory();
+            location='productList.html?search='+search+"&time="+new Date();
         })
         //发现问题.当页面刷新时 重新点击搜索的内容会覆盖之前储存在本地的内容
         //因为从新点击之后arr已经又重置为空数组了;所以解决办法.每次事件之后取去来然后再从新赋值给数组arr 那么他就不会是空了
-        arr = JSON.parse(localStorage.getItem('arr'));
+        
+
     },
     //2.
-    addHistory:function(){
+    addHistory: function () {
+        var that = this;
+        that.getHistoryData();
+        // console.log(that.historyData);
+        var html = template('search-images',  { 'rows': that.historyData })
+        $('#ul1').html(html);
+      
+    },
 
+    //获取本地数据
+    getHistoryData: function () {
+        var that = this;
+       that.historyData = JSON.parse(localStorage.getItem('arr'));
+    },
+    //区域滑动
+    scrollArea:function(){
+        mui('.mui-scroll-wrapper').scroll({
+            deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+        });
+    },
+    //3.单个删除
+    deleteSingle:function(){
+        var that=this;
+        $('#ul1').on('tap','#delete',function(){
+            // console.log($(this).data('id'));
+            that.getHistoryData();
+            console.log(that.historyData);
+            (that.historyData).splice($(this).data('id'),1);
+            //把每次删除过的数组存入本地中,覆盖原来的arr
+            localStorage.setItem('arr', JSON.stringify(that.historyData))
+            console.log(that.historyData);
+            //重新渲染页面
+            that.addHistory()
+        })
+    },
+    //4.清空所有
+    deleteAll:function(){
+        /* 
+            删除有全部删除和指定删除,这里使用指定删除
+        */
+       var that=this;
+       $('#deleteAll').on('tap',function(){
+            
+            localStorage.removeItem('arr')
+            that.addHistory()
+       })
     }
-
 }

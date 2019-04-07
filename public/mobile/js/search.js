@@ -97,7 +97,9 @@ Letao.prototype = {
         // 调用查询数据函数
         that.getHistoryData();
         // 2. 调用模板引擎的方法传入当前模板id和 数据 数组是一个数组不是对象 不是对象就要包 包在一个空对象的rows属性里面
+        console.log(that.historyData);
         var html = template('historyListTpl', { 'rows': that.historyData });
+
         // 3. 把模板渲染到ul里面
         $('.search-history ul').html(html);
         return this;
